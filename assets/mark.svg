@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-labelledby="title">
+  <title id="title">The Workbench mark</title>
+  <rect x="1" y="1" width="38" height="38" fill="#111719" stroke="#56615c"/>
+  <path d="M10 11v18h7M30 11v18h-7" fill="none" stroke="#e8e7df" stroke-width="1.5" stroke-linecap="square"/>
+  <path d="M17 20h6" stroke="#f0b45b" stroke-width="2" stroke-linecap="square"/>
+  <rect x="18.5" y="17.5" width="3" height="5" fill="#f0b45b"/>
+</svg>

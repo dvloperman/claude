@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111719">
+  <meta name="description" content="An independent, evidence-led look at Claude Code: how it works, what it can do, and how to compare coding agents without invented scores.">
+  <meta property="og:title" content="The Workbench — Code, examined">
+  <meta property="og:description" content="An independent technical showcase by AELTRIX TEAM. Watch the workflow. Inspect the evidence.">
+  <meta property="og:type" content="website">
+  <title>The Workbench — Code, examined</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="The Workbench home">
+      <img src="assets/mark.svg" width="34" height="34" alt="">
+      <span class="brand-name">THE WORKBENCH</span>
+      <span class="brand-divider" aria-hidden="true"></span>
+      <span class="brand-edition">AELTRIX / FIELD NOTES 01</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="#workflow">The workflow</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#comparison">The comparison</a>
+      <a class="nav-cta" href="#sources">Inspect the evidence <span aria-hidden="true">↘</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="issue-line"><span class="live-dot" aria-hidden="true"></span> INDEPENDENT TECHNICAL SHOWCASE <span class="line-rule"></span> 20 NOV 2026</p>
+        <h1 id="hero-title">A coding agent<br>is only as good as<br><span>the work it can carry through.</span></h1>
+        <p class="hero-deck">Watch Claude Code move from an unfamiliar codebase to a tested change. Then inspect what the evidence can—and cannot—say about the alternatives.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#workflow">Explore the workflow <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#comparison">Compare the documented facts <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-proofline"><span class="proof-tick" aria-hidden="true">✓</span><span>No invented scores. Every claim has a source.</span></div>
+      </div>
+      <div class="hero-stage" aria-label="Illustrative code change showing a project inspection, focused edit, and passing tests">
+        <div class="stage-top"><span class="stage-project"><i></i> northstar / checkout</span><span class="stage-flag">ILLUSTRATIVE WALKTHROUGH</span><button class="stage-replay" type="button" aria-label="Replay workflow animation">↻</button></div>
+        <div class="stage-body">
+          <div class="stage-rail" aria-hidden="true"><span class="rail-step is-current" data-rail="0">01</span><span class="rail-step" data-rail="1">02</span><span class="rail-step" data-rail="2">03</span></div>
+          <div class="stage-content">
+            <div class="stage-state is-visible" data-state="0">
+              <p class="state-kicker">01 / ORIENT</p><h2>Find the failure path</h2>
+              <div class="mini-tree"><span>⌄ src/</span><span class="tree-indent">⌄ checkout/</span><span class="tree-indent tree-active">↳ totals.ts</span><span class="tree-indent">↳ totals.test.ts</span></div>
+              <p class="state-note">Trace the total from cart inputs to the displayed value.</p>
+            </div>
+            <div class="stage-state" data-state="1" aria-hidden="true">
+              <p class="state-kicker">02 / CHANGE</p><h2>Keep cents intact</h2>
+              <pre class="diff-snippet"><code><span class="diff-context">  export function total(items) {</span>
+<span class="diff-remove">−   return items.reduce((sum, item) =&gt; sum + item.price, 0)</span>
+<span class="diff-add">+   return cents(items.reduce((sum, item) =&gt; sum + item.price, 0))</span>
+<span class="diff-context">  }</span></code></pre>
+              <p class="state-note">Example diff only — not a captured Claude Code session.</p>
+            </div>
+            <div class="stage-state" data-state="2" aria-hidden="true">
+              <p class="state-kicker">03 / VERIFY</p><h2>Check the behavior</h2>
+              <div class="test-line"><span class="test-icon">✓</span><span>totals.test.ts</span><span class="test-result">3 checks passed</span></div>
+              <div class="test-line"><span class="test-icon">✓</span><span>typecheck</span><span class="test-result">clean</span></div>
+              <p class="state-note">A useful result includes the checks that support it.</p>
+            </div>
+          </div>
+        </div>
+        <div class="stage-footer"><span class="stage-progress"><i></i></span><span class="stage-caption" aria-live="polite">Repository context, before code.</span><button class="stage-next" type="button">Next step <span aria-hidden="true">→</span></button></div>
+        <div class="stage-index"><span>FIG 01</span><span>SIMULATED · NO PERFORMANCE CLAIM</span></div>
+      </div>
+      <div class="hero-bottom-note"><span>01—</span> A closer look at the agentic coding workflow</div>
+    </section>
+
+    <section class="intro-band" aria-label="What Claude Code is">
+      <div class="section-wrap intro-grid">
+        <p class="section-index">THE SUBJECT<br><span>CLAUDE CODE</span></p>
+        <div><h2>It works with the project,<br>not just the prompt.</h2><p>Anthropic documents Claude Code as an agentic coding tool that can read a codebase, edit files, run commands, and connect with development tools. The exact workflow depends on the surface, configuration, permissions, and task.</p></div>
+        <a class="source-chip" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer">Anthropic docs <span aria-hidden="true">↗</span><small>Undated · checked 20 Nov 2026</small></a>
+      </div>
+    </section>
+
+    <section class="workflow-section section-wrap" id="workflow" aria-labelledby="workflow-title">
+      <div class="section-heading"><div><p class="section-index">A TASK, MADE VISIBLE</p><h2 id="workflow-title">The useful part is<br>what happens between.</h2></div><p class="section-aside">A representative sequence, not a product recording. Each stage is inspectable; the example is clearly labeled so it can’t be mistaken for measured evidence.</p></div>
+      <div class="workflow-layout">
+        <div class="workflow-tabs" role="tablist" aria-label="Workflow stages">
+          <button class="workflow-tab is-active" id="tab-understand" role="tab" aria-selected="true" aria-controls="panel-understand" tabindex="0" data-workflow="understand"><span>01</span><span><b>Understand</b><small>Trace existing behavior</small></span><i>↗</i></button>
+          <button class="workflow-tab" id="tab-plan" role="tab" aria-selected="false" aria-controls="panel-plan" tabindex="-1" data-workflow="plan"><span>02</span><span><b>Plan</b><small>Make the change legible</small></span><i>↗</i></button>
+          <button class="workflow-tab" id="tab-edit" role="tab" aria-selected="false" aria-controls="panel-edit" tabindex="-1" data-workflow="edit"><span>03</span><span><b>Edit</b><small>Change the right surface</small></span><i>↗</i></button>
+          <button class="workflow-tab" id="tab-verify" role="tab" aria-selected="false" aria-controls="panel-verify" tabindex="-1" data-workflow="verify"><span>04</span><span><b>Verify</b><small>Run checks, report limits</small><i>↗</i></button>
+        </div>
+        <div class="workflow-display">
+          <div class="workflow-panel is-active" id="panel-understand" role="tabpanel" aria-labelledby="tab-understand" tabindex="0" data-panel="understand">
+            <div class="panel-bar"><span>PROJECT MAP</span><span>READ-ONLY VIEW</span></div>
+            <div class="project-map"><div class="map-root">northstar <span>repository</span></div><div class="map-branch"><div class="map-node"><span class="node-file">TS</span><b>checkout/total.ts</b><small>rounding path</small></div><div class="map-node"><span class="node-file node-test">T</span><b>checkout/total.test.ts</b><small>missing edge case</small></div><div class="map-node map-node-muted"><span class="node-file node-doc">MD</span><b>pricing.md</b><small>contract reference</small></div></div></div>
+            <div class="panel-insight"><span class="insight-mark">↳</span><p><b>Follow the value.</b> The total is assembled in one module, described in a contract, and checked in a separate test file.</p></div>
+          </div>
+          <div class="workflow-panel" id="panel-plan" role="tabpanel" aria-labelledby="tab-plan" tabindex="0" data-panel="plan" hidden>
+            <div class="panel-bar"><span>PROPOSED PLAN</span><span>REVIEWABLE BEFORE EDITS</span></div>
+            <div class="plan-list"><p><span>01</span> Read the total calculation and its contract.</p><p><span>02</span> Add a failing edge-case test for fractional cents.</p><p><span>03</span> Apply the smallest change that satisfies the test.</p><p><span>04</span> Run the focused test and the project type check.</p></div>
+            <div class="panel-insight"><span class="insight-mark">!</span><p><b>Plan before patch.</b> Review the scope while it’s still cheap to change.</p></div>
+          </div>
+          <div class="workflow-panel" id="panel-edit" role="tabpanel" aria-labelledby="tab-edit" tabindex="0" data-panel="edit" hidden>
+            <div class="panel-bar"><span>PATCH PREVIEW</span><span>ILLUSTRATIVE · NOT A REAL RUN</span></div>
+            <pre class="large-diff"><code><span class="code-dim">@@ checkout/total.ts</span>
+<span class="code-plain">export function getTotal(lines: Line[]) {</span>
+<span class="code-remove">-  return lines.reduce((sum, line) =&gt; sum + line.price, 0)</span>
+<span class="code-add">+  const cents = lines.reduce((sum, line) =&gt;</span>
+<span class="code-add">+    sum + Math.round(line.price * 100), 0)</span>
+<span class="code-add">+  return cents / 100</span>
+<span class="code-plain">}</span></code></pre>
+            <div class="panel-insight"><span class="insight-mark">↳</span><p><b>Keep the diff focused.</b> This example shows a possible approach, not an endorsed implementation.</p></div>
+          </div>
+          <div class="workflow-panel" id="panel-verify" role="tabpanel" aria-labelledby="tab-verify" tabindex="0" data-panel="verify" hidden>
+            <div class="panel-bar"><span>CHECKS TO RUN</span><span>RESULTS MUST BE OBSERVED</span></div>
+            <div class="verification-list"><div><span class="check-empty"></span><b>Targeted unit tests</b><small>pricing edge cases</small><em>not run</em></div><div><span class="check-empty"></span><b>Type checker</b><small>project configuration</small><em>not run</em></div><div><span class="check-empty"></span><b>Diff review</b><small>scope and regressions</small><em>required</em></div></div>
+            <div class="panel-insight"><span class="insight-mark">!</span><p><b>No result is claimed here.</b> A real evaluation should publish the command, environment, and observed output.</p></div>
+          </div>
+        </div>
+      </div>
+      <p class="figure-caption"><span>FIG 02</span> Workflow illustration created for this site. No agent session or benchmark result is represented.</p>
+    </section>
+
+    <section class="capability-section" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="section-wrap">
+        <div class="section-heading capability-heading"><div><p class="section-index">DOCUMENTED CAPABILITIES</p><h2 id="capabilities-title">Tools for the whole<br>shape of the work.</h2></div><p class="section-aside">Three groups drawn from the official Claude Code overview. Features vary by platform and setup; source details and dates are in the evidence ledger.</p></div>
+        <div class="capability-river">
+          <article class="capability-row"><div class="cap-visual cap-visual-1" aria-hidden="true"><span class="orbit orbit-a"></span><span class="orbit orbit-b"></span><span class="orbit-core">repo</span><span class="orbit-label orbit-label-a">FILES</span><span class="orbit-label orbit-label-b">TOOLS</span></div><div class="cap-copy"><span class="cap-number">A / CONTEXT</span><h3>Get oriented<br>across the codebase.</h3><p>Read project files, trace related code, and use repository instructions to work within an existing project’s conventions.</p><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer">Read the official overview <span aria-hidden="true">↗</span></a></div></article>
+          <article class="capability-row capability-row-reverse"><div class="cap-visual cap-visual-2" aria-hidden="true"><span class="change-line change-old">− legacy path</span><span class="change-line change-new">+ revised path</span><span class="change-bracket"></span><span class="change-tag">MULTI-FILE</span></div><div class="cap-copy"><span class="cap-number">B / CHANGE</span><h3>Make connected<br>changes coherently.</h3><p>Describe a feature or bug in plain language. Claude Code can plan an approach and edit across multiple files as part of a coding task.</p><a href="https://code.claude.com/docs/en/common-workflows" target="_blank" rel="noopener noreferrer">Explore common workflows <span aria-hidden="true">↗</span></a></div></article>
+          <article class="capability-row"><div class="cap-visual cap-visual-3" aria-hidden="true"><div class="check-ring"><span>✓</span></div><div class="check-label check-label-one">TESTS</div><div class="check-label check-label-two">GIT</div><div class="check-label check-label-three">MCP</div><span class="check-dash dash-one"></span><span class="check-dash dash-two"></span><span class="check-dash dash-three"></span></div><div class="cap-copy"><span class="cap-number">C / VERIFICATION</span><h3>Bring the tools<br>that close the loop.</h3><p>Run commands, work with Git, connect external tools through MCP, and automate tasks with project-specific instructions and hooks.</p><a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener noreferrer">See MCP documentation <span aria-hidden="true">↗</span></a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparison-section" id="comparison" aria-labelledby="comparison-title">
+      <div class="section-wrap">
+        <div class="comparison-header"><div><p class="section-index">CLAUDE CODE × OPENAI CODEX</p><h2 id="comparison-title">A comparison should<br>show its working.</h2></div><p class="comparison-lede">Features below are drawn from first-party documentation. They describe each product’s documented surface—not a universal ranking of quality.</p></div>
+        <div class="comparison-controls" role="tablist" aria-label="Comparison view">
+          <button class="compare-tab is-active" id="compare-product-tab" role="tab" aria-selected="true" aria-controls="compare-product" data-compare="product">Product capabilities</button>
+          <button class="compare-tab" id="compare-performance-tab" role="tab" aria-selected="false" aria-controls="compare-performance" data-compare="performance">Practical performance</button>
+        </div>
+        <div class="compare-view is-active" id="compare-product" role="tabpanel" aria-labelledby="compare-product-tab" data-view="product">
+          <div class="compare-table-wrap" tabindex="0" aria-label="Scrollable product capability comparison">
+            <table class="compare-table"><thead><tr><th scope="col">Documented area</th><th scope="col"><span class="table-brand claude-brand"><i></i> Claude Code</span></th><th scope="col"><span class="table-brand codex-brand"><i></i> OpenAI Codex</span></th></tr></thead><tbody>
+              <tr><th scope="row">Ways to work</th><td><span class="status status-doc">DOCUMENTED</span><p>Terminal, VS Code, JetBrains, desktop app, and web surfaces are listed in Anthropic’s overview.</p><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer">Anthropic docs ↗</a></td><td><span class="status status-doc">DOCUMENTED</span><p>OpenAI describes cloud tasks, editor and terminal workflows, plus Codex access through ChatGPT and its CLI/SDK ecosystem.</p><a href="https://openai.com/index/codex-now-generally-available/" target="_blank" rel="noopener noreferrer">OpenAI, 6 Oct 2025 ↗</a></td></tr>
+              <tr><th scope="row">Work with code</th><td><span class="status status-doc">DOCUMENTED</span><p>Read a codebase, edit files, run commands, build features, fix bugs, and work with Git.</p><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer">Anthropic docs ↗</a></td><td><span class="status status-doc">DOCUMENTED</span><p>OpenAI describes coding tasks in cloud workspaces and local editor/terminal workflows. Details depend on product surface.</p><a href="https://openai.com/codex/" target="_blank" rel="noopener noreferrer">OpenAI Codex ↗</a></td></tr>
+              <tr><th scope="row">Extensibility</th><td><span class="status status-doc">DOCUMENTED</span><p>MCP connections, skills, hooks, subagents, and the Agent SDK are covered in Claude Code documentation.</p><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer">Anthropic docs ↗</a></td><td><span class="status status-doc">DOCUMENTED</span><p>OpenAI documents a TypeScript SDK, GitHub Action, and integrations such as Slack delegation in its GA announcement.</p><a href="https://openai.com/index/codex-now-generally-available/" target="_blank" rel="noopener noreferrer">OpenAI, 6 Oct 2025 ↗</a></td></tr>
+              <tr><th scope="row">Execution controls</th><td><span class="status status-check">CONFIGURATION-DEPENDENT</span><p>Permission modes and settings govern available actions; inspect the current docs for the chosen surface.</p><a href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener noreferrer">Anthropic permissions ↗</a></td><td><span class="status status-check">CONFIGURATION-DEPENDENT</span><p>Execution environment, sandbox, and workspace configuration affect what an agent can do.</p><a href="https://openai.com/codex/" target="_blank" rel="noopener noreferrer">OpenAI Codex ↗</a></td></tr>
+            </tbody></table>
+          </div>
+          <p class="compare-note"><span>READ THIS AS A SNAPSHOT.</span> Product surfaces change quickly. These rows record what the linked first-party sources document; absence from this table does not mean a capability is absent.</p>
+        </div>
+        <div class="compare-view" id="compare-performance" role="tabpanel" aria-labelledby="compare-performance-tab" data-view="performance" hidden>
+          <div class="performance-intro"><div><span class="status status-open">NO HEAD-TO-HEAD RUN PUBLISHED</span><h3>We won’t turn separate scorecards into a race.</h3><p>We have not run a controlled Claude Code vs. Codex evaluation for this site. In the sources reviewed, we have not identified a current independent comparison with matched tasks, pinned versions, and a shared protocol that we can responsibly present as a direct winner comparison.</p></div><div class="performance-stamp" aria-hidden="true"><span>RESULT</span><b>—</b><small>NOT MEASURED</small></div></div>
+          <div class="methodology"><div class="method-head"><span>THE TEST WE WOULD TRUST</span><span>PROTOCOL PROPOSAL · NOT EXECUTED</span></div><div class="method-grid"><article><span>01</span><h4>Same task set</h4><p>Fresh, isolated repository snapshots with tasks spanning bug fixes, feature work, and maintenance.</p></article><article><span>02</span><h4>Pin the setup</h4><p>Record agent and model versions, settings, tools, budgets, environment, and exact prompts.</p></article><article><span>03</span><h4>Run fairly</h4><p>Use matched limits, multiple trials where practical, and randomized order to reduce run-order effects.</p></article><article><span>04</span><h4>Judge the patch</h4><p>Run hidden tests, review regressions and maintainability, and publish raw artifacts with limitations.</p></article></div><div class="method-bottom"><span class="method-symbol">∴</span><p><b>Benchmark caution:</b> OpenAI reported in Feb 2026 that a review of SWE-bench Verified found substantial task/test issues and possible training exposure. A 2025 ACL paper, UTBoost, also reported that inadequate tests can make incorrect patches appear successful. Scores are not self-explanatory.</p></div></div>
+          <div class="evidence-ribbon"><span>KNOWN LIMITATION</span><p>Until a reproducible paired run is completed, practical performance remains an open question here—not an implied win for either product.</p></div>
+        </div>
+        <div class="comparison-foot"><span>METHOD > MASCOT</span><span>Documentation accessed 20 Nov 2026</span><span>Independent editorial project</span></div>
+      </div>
+    </section>
+
+    <section class="evidence-section section-wrap" id="sources" aria-labelledby="sources-title">
+      <div class="evidence-title"><div><p class="section-index">SOURCE LEDGER</p><h2 id="sources-title">Follow every thread.</h2></div><p>First-party docs establish documented features. Independent research and benchmark methodology inform the limits of performance claims. Dates below distinguish publication dates from access dates.</p></div>
+      <div class="source-list">
+        <article class="source-entry"><span class="source-kind">PRIMARY / ANTHROPIC</span><div><h3><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer">Claude Code — Overview <span aria-hidden="true">↗</span></a></h3><p>Official product surfaces, workflows, integrations, and capabilities. Living documentation; no publication date shown.</p></div><time datetime="2026-11-20">Checked 20 Nov 2026</time></article>
+        <article class="source-entry"><span class="source-kind">PRIMARY / OPENAI</span><div><h3><a href="https://openai.com/index/codex-now-generally-available/" target="_blank" rel="noopener noreferrer">Codex is now generally available <span aria-hidden="true">↗</span></a></h3><p>Official feature and integration announcement. Company-reported outcomes are not independent controlled results.</p></div><time datetime="2025-10-06">6 Oct 2025</time></article>
+        <article class="source-entry"><span class="source-kind">EVALUATION / OPENAI</span><div><h3><a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/" target="_blank" rel="noopener noreferrer">Why we no longer evaluate SWE-bench Verified <span aria-hidden="true">↗</span></a></h3><p>OpenAI’s account of test quality, task flaws, and potential training-data exposure affecting benchmark interpretation.</p></div><time datetime="2026-02-23">23 Feb 2026</time></article>
+        <article class="source-entry"><span class="source-kind">RESEARCH / ACL 2025</span><div><h3><a href="https://aclanthology.org/2025.acl-long.189/" target="_blank" rel="noopener noreferrer">UTBoost: Rigorous Evaluation of Coding Agents on SWE-Bench <span aria-hidden="true">↗</span></a></h3><p>Research on test adequacy and the risk of incorrect patches passing benchmark checks. Findings are specific to its audit method.</p></div><time datetime="2025-07-27">ACL 2025</time></article>
+        <article class="source-entry"><span class="source-kind">BENCHMARK / SWE-BENCH</span><div><h3><a href="https://www.swebench.com/verified.html" target="_blank" rel="noopener noreferrer">SWE-bench Verified <span aria-hidden="true">↗</span></a></h3><p>Benchmark task-set overview and evaluation notes. Leaderboard results vary by agent harness and setup; compare protocols, not just percentages.</p></div><time datetime="2026-11-20">Checked 20 Nov 2026</time></article>
+      </div>
+      <p class="source-policy">Source policy: link directly to publishers, preserve their claims as attributed claims, and update this ledger when a comparison row changes. Contact the team to flag a broken link or factual correction.</p>
+    </section>
+
+    <section class="closing-section" aria-labelledby="closing-title"><div class="section-wrap closing-inner"><div class="closing-mark" aria-hidden="true"><span></span><span></span><span></span></div><p class="section-index">THE WORK IS THE PROOF</p><h2 id="closing-title">Bring a real task.<br>Keep the evidence.</h2><p>Explore Claude Code through its official documentation. Use this showcase as a map, not an endorsement or a substitute for your own evaluation.</p><a class="button button-light" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer">Explore Claude Code docs <span aria-hidden="true">↗</span></a><div class="closing-aside">Independent editorial & technical showcase<br>Not affiliated with Anthropic or OpenAI.</div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-top"><a class="brand footer-brand" href="#top"><img src="assets/mark.svg" width="30" height="30" alt=""><span class="brand-name">THE WORKBENCH</span></a><p>Code, examined. Evidence, intact.</p><a class="back-top" href="#top">Back to top ↑</a></div><div class="footer-bottom"><span>© 2026 AELTRIX TEAM</span><span>Created, designed & developed by <strong>Mr.R3B</strong></span><span>Independent project · Not affiliated with Anthropic or OpenAI</span></div></footer>
+</body>
+</html>
